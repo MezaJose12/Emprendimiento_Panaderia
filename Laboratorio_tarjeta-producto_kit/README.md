@@ -5,7 +5,7 @@ Programación Integrativa de Componentes Web · Unidad 1: Web Components
 | Dato | Completa |
 |---|---|
 | Emprendimiento | Panadería "El Trigo Dorado". |
-| Estudiantes (Apellido Nombre) | Meza José, Tonato Sebastian, Morales Anthony |
+| Estudiantes (Apellido Nombre) | Meza José, Tonato Sebastian, Morales Anthony, Melany Torres|
 | NRC | 36642 |
 | Fecha | 13/10/2026 |
 | Enlace del repositorio | [Pega tu enlace de GitHub aquí] |
