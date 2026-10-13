@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panadería El Trigo Dorado</title>
+  <link rel="stylesheet" href="./estilos.css">
+
+  <!-- PASO 1 · La página solo importa el módulo del componente.
+       Ábrela con Live Server: los módulos no cargan con file:// -->
+  <script type="module" src="./componentes/tarjeta-producto.js"></script>
+</head>
+<body>
+  <!-- Cambia el título por el nombre de tu emprendimiento -->
+  <h1>Panadería "El Trigo Dorado"</h1>
+
+  <!-- PASO 4 · Usa la tarjeta tres veces con productos REALES de tu emprendimiento:
+       cambia la foto, el nombre, la descripción y el precio de cada una. -->
+  <main class="catalogo">
+
+    <tarjeta-producto precio="0.50">
+      <img slot="foto" src="./img/producto-1-pan.jpg" alt="Canasta de pan francés artesanal">
+      <h3 slot="nombre">Pan Francés</h3>
+      <p>Clásico pan de corteza crujiente y miga suave, horneado esta mañana.</p>
+    </tarjeta-producto>
+
+    <!-- Usando el atributo destacado opcional del Reto Extra -->
+    <tarjeta-producto precio="1.50" destacado>
+      <img slot="foto" src="./img/producto-2-leche.avif" alt="Croissant recién horneado">
+      <h3 slot="nombre">Croissant de Mantequilla</h3>
+      <p>Masa hojaldrada con auténtica mantequilla y textura ligera.</p>
+    </tarjeta-producto>
+
+    <tarjeta-producto precio="12.00">
+      <img slot="foto" src="./img/producto-3-huevos.jpeg" alt="Pastel entero de chocolate">
+      <h3 slot="nombre">Torta de Chocolate</h3>
+      <p>Esponjoso bizcocho de cacao bañado en cobertura de chocolate oscuro.</p>
+    </tarjeta-producto>
+
+  </main>
+</body>
+</html>
