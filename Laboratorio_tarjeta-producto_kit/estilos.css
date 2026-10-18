@@ -1,8 +1,8 @@
 :root {
   color-scheme: light;
   font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  color: #38271f;
-  background: #fbf6ed;
+  color: #b37c63;
+  background: #918775;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -19,7 +19,7 @@ body {
   padding: clamp(32px, 7vw, 76px) 24px;
   background:
     radial-gradient(ellipse at 12% 4%, rgba(232, 188, 126, 0.22), transparent 34rem),
-    #fbf6ed;
+    #aca9a5;
 }
 
 h1 {
