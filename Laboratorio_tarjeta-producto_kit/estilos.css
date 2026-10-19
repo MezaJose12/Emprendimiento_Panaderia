@@ -1,8 +1,8 @@
 :root {
   color-scheme: light;
   font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  color: #38271f;
-  background: #fbf6ed;
+  color: #4a3b40;
+  background: #fff5f8;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -18,14 +18,31 @@ body {
   margin: 0;
   padding: clamp(32px, 7vw, 76px) 24px;
   background:
-    radial-gradient(ellipse at 12% 4%, rgba(232, 188, 126, 0.22), transparent 34rem),
-    #fbf6ed;
+    radial-gradient(ellipse at 12% 4%, rgba(255, 182, 193, 0.25), transparent 34rem),
+    #fff5f8;
+}
+
+footer {
+  margin-top: auto;
+  padding: 24px 0;
+  text-align: center;
+}
+
+p.eslogan {
+  max-width: 1000px;
+  margin: 0 auto 36px;
+  color: #7a5c65;
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: center;
 }
 
 h1 {
   max-width: 1000px;
   margin: 0 auto 36px;
-  color: #432b20;
+  color: #883955;
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 700;
@@ -40,7 +57,7 @@ h1::after {
   height: 4px;
   margin: 18px auto 0;
   border-radius: 999px;
-  background: #c8753e;
+  background: #ff69b4;
   content: "";
 }
 
@@ -53,23 +70,23 @@ h1::after {
 }
 
 tarjeta-producto {
-  --color-marca: #a94f28;
-  --borde: #eadbca;
+  --color-marca: #d81b60;
+  --borde: #ffccd5;
 
   min-width: 0;
   border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(78, 49, 31, 0.08);
+  box-shadow: 0 8px 24px rgba(216, 27, 96, 0.08);
   transition: box-shadow 180ms ease, transform 180ms ease;
 }
 
 tarjeta-producto:hover {
-  box-shadow: 0 14px 30px rgba(78, 49, 31, 0.14);
+  box-shadow: 0 14px 30px rgba(216, 27, 96, 0.16);
   transform: translateY(-4px);
 }
 
 tarjeta-producto h3 {
   margin: 16px 0 8px;
-  color: #432b20;
+  color: #883955;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1.35rem;
   line-height: 1.25;
@@ -77,7 +94,7 @@ tarjeta-producto h3 {
 
 tarjeta-producto p {
   margin: 0;
-  color: #706056;
+  color: #7a5c65;
   font-size: 0.96rem;
   line-height: 1.6;
 }

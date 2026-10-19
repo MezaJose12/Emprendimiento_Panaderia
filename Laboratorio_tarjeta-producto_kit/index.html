@@ -13,6 +13,7 @@
 <body>
   <!-- Cambia el título por el nombre de tu emprendimiento -->
   <h1>Panadería "El Trigo Dorado"</h1>
+  <p class="eslogan">Panadería artesanal con ingredientes de calidad</p>
 
   <!-- PASO 4 · Usa la tarjeta tres veces con productos REALES de tu emprendimiento:
        cambia la foto, el nombre, la descripción y el precio de cada una. -->
@@ -22,6 +23,7 @@
       <img slot="foto" src="./img/producto-1-pan.jpeg" alt="Canasta de pan francés artesanal">
       <h3 slot="nombre">Pan Francés</h3>
       <p>Clásico pan de corteza crujiente y miga suave, horneado esta mañana.</p>
+      <button slot="accion" class="btn-comprar">Comprar</button>
     </tarjeta-producto>
 
     <!-- Usando el atributo destacado opcional del Reto Extra -->
@@ -29,15 +31,21 @@
       <img slot="foto" src="./img/producto-2-leche.jpeg" alt="Croissant recién horneado">
       <h3 slot="nombre">Leche Fresquita</h3>
       <p>Leche entera, fresca del día, ideal para tu café matutino.</p>
+      <button slot="accion" class="btn-comprar">Comprar</button>
     </tarjeta-producto>
 
     <tarjeta-producto precio="12.00">
       <img slot="foto" src="./img/producto-3-huevos.jpeg" alt="Pastel entero de chocolate">
       <h3 slot="nombre">Huevos de Granja</h3>
       <p>Huevos de granja, frescos del día, ideales para tu desayuno.</p>
+      <button slot="accion" class="btn-comprar">Comprar</button>
     </tarjeta-producto>
    
 
   </main>
+
+  <footer>
+    <p>&copy; 2026 Panadería "El Trigo Dorado". Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>

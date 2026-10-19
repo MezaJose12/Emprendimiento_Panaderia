@@ -9,7 +9,7 @@ plantilla.innerHTML = `
   <style>
     :host {
       display: block;
-      border: 2px solid var(--borde, #ffd1dc);
+      border: 2px solid var(--borde, #ffccd5);
       padding: 16px;
       margin-bottom: 16px;
       border-radius: 16px;
@@ -17,15 +17,17 @@ plantilla.innerHTML = `
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       box-shadow: 0 6px 15px rgba(255, 182, 193, 0.2);
       transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     
     :host(:hover) {
       transform: translateY(-6px);
       box-shadow: 0 10px 20px rgba(255, 105, 180, 0.25);
-      border-color: var(--color-marca, #ff69b4);
+      border-color: var(--color-marca, #d81b60);
     }
 
-    /* Estilo cuando tiene el atributo 'destacado' */
     :host([destacado]) {
       border: 2px solid var(--color-marca, #ff1493);
       background: linear-gradient(135deg, #fff9fb 0%, #ffe4e1 100%);
@@ -40,33 +42,61 @@ plantilla.innerHTML = `
 
     ::slotted([slot="nombre"]) {
       font-size: 1.25rem;
-      color: #d81b60;
+      color: #883955;
       margin: 12px 0 8px 0;
       font-weight: 700;
     }
 
     ::slotted(p) {
       font-size: 0.95rem;
-      color: #6c584c;
-      margin: 0 0 12px 0;
+      color: #7a5c65;
+      margin: 0 0 16px 0;
       line-height: 1.4;
+    }
+
+    .pie-tarjeta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: auto;
+      padding-top: 8px;
+      border-top: 1px dashed #ffd1dc;
     }
 
     .precio-etiqueta {
       color: var(--color-marca, #d81b60); 
-      font-size: 1.3rem;
+      font-size: 1.25rem;
       font-weight: bold;
-      margin-top: 12px;
-      display: flex;
-      align-items: center;
-      gap: 4px;
+    }
+
+    ::slotted([slot="accion"]) {
+      background-color: #d81b60;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: background 0.2s ease, transform 0.1s ease;
+    }
+
+    ::slotted([slot="accion"]:hover) {
+      background-color: #ad1457;
+      transform: scale(1.03);
     }
   </style>
+
+  <div>
+    <slot name="foto"></slot>
+    <slot name="nombre"></slot>
+    <slot>Delicia recién horneada.</slot>
+  </div>
   
-  <slot name="foto"></slot>
-  <slot name="nombre"></slot>
-  <slot>Delicia recién horneada.</slot>
-  <div class="precio-etiqueta"><span>$</span><span id="precio-display">0.00</span></div>
+  <div class="pie-tarjeta">
+    <div class="precio-etiqueta">$<span id="precio-display">0.00</span></div>
+    <slot name="accion"></slot>
+  </div>
 `;
 
 export class TarjetaProducto extends HTMLElement {
