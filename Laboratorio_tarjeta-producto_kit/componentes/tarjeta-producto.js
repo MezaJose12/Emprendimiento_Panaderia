@@ -9,44 +9,64 @@ plantilla.innerHTML = `
   <style>
     :host {
       display: block;
-      border: 1px solid var(--borde, #ccc);
+      border: 2px solid var(--borde, #ffd1dc);
       padding: 16px;
       margin-bottom: 16px;
-      border-radius: 8px;
-      background-color: #fff;
-      font-family: sans-serif;
+      border-radius: 16px;
+      background-color: #fff9fb;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      box-shadow: 0 6px 15px rgba(255, 182, 193, 0.2);
+      transition: all 0.3s ease;
     }
     
-    /* Reto extra opcional: Cambia el borde si tiene el atributo 'destacado' */
-    :host([destacado]) {
-      border: 2px solid var(--color-marca, #d2691e);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    :host(:hover) {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(255, 105, 180, 0.25);
+      border-color: var(--color-marca, #ff69b4);
     }
 
-    .precio-etiqueta {
-      /* Lee el color de marca, o usa #d2691e como respaldo */
-      color: var(--color-marca, #d2691e); 
-      font-size: 1.25rem;
-      font-weight: bold;
-      margin-top: 10px;
+    /* Estilo cuando tiene el atributo 'destacado' */
+    :host([destacado]) {
+      border: 2px solid var(--color-marca, #ff1493);
+      background: linear-gradient(135deg, #fff9fb 0%, #ffe4e1 100%);
     }
 
     ::slotted(img) {
-      max-width: 100%;
-      height: auto;
-      border-radius: 4px;
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    ::slotted([slot="nombre"]) {
+      font-size: 1.25rem;
+      color: #d81b60;
+      margin: 12px 0 8px 0;
+      font-weight: 700;
+    }
+
+    ::slotted(p) {
+      font-size: 0.95rem;
+      color: #6c584c;
+      margin: 0 0 12px 0;
+      line-height: 1.4;
+    }
+
+    .precio-etiqueta {
+      color: var(--color-marca, #d81b60); 
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
     }
   </style>
-
-  <!-- PASO 2 · Escribe aquí:
-  - un slot con nombre "foto"
-  - un slot con nombre "nombre"
-  - un slot sin nombre, con un texto de respaldo
-  - un lugar donde se vea el precio (por ejemplo un <span id="precio">) -->
+  
   <slot name="foto"></slot>
   <slot name="nombre"></slot>
-  <slot>Sin descripción del producto</slot>
-  <div class="precio-etiqueta">Precio: $<span id="precio-display">0.00</span></div>
+  <slot>Delicia recién horneada.</slot>
+  <div class="precio-etiqueta"><span>$</span><span id="precio-display">0.00</span></div>
 `;
 
 export class TarjetaProducto extends HTMLElement {
