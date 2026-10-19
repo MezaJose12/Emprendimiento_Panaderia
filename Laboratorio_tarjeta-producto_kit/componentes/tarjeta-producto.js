@@ -36,6 +36,16 @@ plantilla.innerHTML = `
       height: auto;
       border-radius: 4px;
     }
+    ::slotted([slot="etiqueta"]) {
+      display: inline-block;
+      background: #c0392b;
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: bold;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
   </style>
 
   <!-- PASO 2 · Escribe aquí:
@@ -43,6 +53,7 @@ plantilla.innerHTML = `
   - un slot con nombre "nombre"
   - un slot sin nombre, con un texto de respaldo
   - un lugar donde se vea el precio (por ejemplo un <span id="precio">) -->
+  <slot name="etiqueta"></slot>
   <slot name="foto"></slot>
   <slot name="nombre"></slot>
   <slot>Sin descripción del producto</slot>
